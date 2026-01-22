@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visit Jaipur</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    color:#222;
+    line-height:1.6;
+}
+
+/* HERO SECTION */
+.hero{
+    height:100vh;
+    background:url('https://images.unsplash.com/photo-1602643163983-ed0babc39797') center/cover fixed;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+
+.hero-text{
+    color:#fff;
+    text-align:center;
+    z-index:1;
+}
+
+.hero-text h1{
+    font-family:'Playfair Display', serif;
+    font-size:4rem;
+    letter-spacing:3px;
+}
+
+.hero-text p{
+    font-size:1.2rem;
+    margin-top:10px;
+}
+
+/* SECTION STYLE */
+.section{
+    padding:80px 10%;
+}
+
+.section h2{
+    font-family:'Playfair Display', serif;
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+/* PARALLAX SECTION */
+.parallax{
+    background:url('https://images.unsplash.com/photo-1585506942812-e72b29cef752') center/cover fixed;
+    color:white;
+    text-align:center;
+}
+
+.parallax p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.1rem;
+}
+
+/* PLACES */
+.places{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+}
+
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.card:hover img{
+    transform:scale(1.1);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    opacity:0;
+    transition:0.4s;
+}
+
+.card:hover .overlay{
+    opacity:1;
+}
+
+.overlay h3{
+    font-family:'Playfair Display', serif;
+    font-size:1.8rem;
+}
+
+/* FOOTER */
+footer{
+    padding:40px 10%;
+    background:#111;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+/* INDIAN FLAG */
+.flag{
+    width:120px;
+    animation:wave 3s infinite ease-in-out;
+}
+
+.stripe{
+    height:20px;
+}
+
+.saffron{background:#FF9933;}
+.white{
+    background:white;
+    position:relative;
+}
+.green{background:#138808;}
+
+.chakra{
+    width:16px;
+    height:16px;
+    border:2px solid #000080;
+    border-radius:50%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+@keyframes wave{
+    0%{transform:skewY(0deg);}
+    50%{transform:skewY(3deg);}
+    100%{transform:skewY(0deg);}
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero-text h1{
+        font-size:2.8rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>JAIPUR</h1>
+        <p>The Pink City of Royal Stories</p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+    <h2>About Jaipur</h2>
+    <p>
+        Jaipur, the capital of Rajasthan, is known for its royal palaces,
+        colorful streets, and rich cultural heritage. From historic forts
+        to vibrant bazaars, every corner tells a story of royalty and tradition.
+    </p>
+</section>
+
+<!-- PARALLAX -->
+<section class="section parallax">
+    <h2>Feel the Royal Vibes</h2>
+    <p>
+        Walk through grand forts, witness stunning architecture,
+        and experience the warmth of Rajasthani culture.
+    </p>
+</section>
+
+<!-- PLACES -->
+<section class="section">
+    <h2>Must Visit Places</h2>
+
+    <div class="places">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1585128792020-803d29415281">
+            <div class="overlay"><h3>Hawa Mahal</h3></div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1604933762020-6e44b90b5e5a">
+            <div class="overlay"><h3>Amber Fort</h3></div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1599661046827-dacde0d19e55">
+            <div class="overlay"><h3>City Palace</h3></div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>Made with ❤️ for travelers</p>
+
+    <div class="flag">
+        <div class="stripe saffron"></div>
+        <div class="stripe white">
+            <div class="chakra"></div>
+        </div>
+        <div class="stripe green"></div>
+    </div>
+</footer>
+
+</body>
+</html>
